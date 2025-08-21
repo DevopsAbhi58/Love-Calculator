@@ -45,7 +45,9 @@ h1 {
 .text-1:hover {
   transform: scale(1.05);
 }
-
+.button-blur {
+      filter: blur(6px);
+    }
 .button {
   display: flex;
   justify-content: center;
@@ -85,7 +87,9 @@ h1 {
   pointer-events: none;   /* inactive when hidden */
 }
 
-
+.blur {
+      filter: blur(6px);
+}
 
 
 

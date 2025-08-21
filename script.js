@@ -6,6 +6,8 @@ const text2 = document.querySelector('.text');
 
 const checkBtn = document.querySelector('.button');
 
+const blrBtn = document.querySelector('button-blur');
+
 const restartBtn = document.querySelector('.button-btn');
 
 const p1 = document.querySelector('.p1');
@@ -26,6 +28,7 @@ const restart = function(){
 }
 
 checkBtn.addEventListener('click', function () {
+    
   if (text1.value === "" || text2.value === "") {
     playing = false;
     return;
@@ -36,18 +39,30 @@ checkBtn.addEventListener('click', function () {
 if (randomNumber > 72) {
 
    p1.textContent = `You both are compatible ❤️ (${randomNumber}%)`; 
+   
+restart();
   p1.classList.remove('hidden'); 
-  p2.classList.add('hidden'); 
+  p2.classList.add('hidden');
+  bg.classList.toogle('blurBtn'); 
+  
+
+
 } else {
 
      p2.textContent = `Aah! You both are not compatible 💔 (${randomNumber}%)`;
 
+restart();
   p1.classList.add('hidden'); 
-  p2.classList.remove('hidden');    
+  p2.classList.remove('hidden');  
+  bg.classList.toogle('blurBtn'); 
+
+  
+
 }
 
-  console.log(randomNumber);
 });
+
+
 
 restartBtn.addEventListener('click',function(){
 restart();
